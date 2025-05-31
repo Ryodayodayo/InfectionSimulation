@@ -56,7 +56,7 @@ for t in range(loop_num):
     new_R = R + delta_t * ((1-DR)*HR * I)
     new_D = D + delta_t * (DR * HR * I)
 
-    """すべての微分の足し算→0""" #(-IR * CN * (I/N) * S)+(IR * CN * (I/N) * S - HR * I)+((1-DR)*HR * I)+(DR * HR * I)
+    """すべての微分形の足し算→0""" #(-IR * CN * (I/N) * S)+(IR * CN * (I/N) * S - HR * I)+((1-DR)*HR * I)+(DR * HR * I)
 
     t_list.append(t)
     S_list.append(new_S)
