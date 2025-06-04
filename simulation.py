@@ -31,7 +31,7 @@ S_initial = N - I_initial - R_initial - D_initial
 contact_num = 14 #流行前の平均接触人数(１日における一人当たり)
 emergency_contact_num = contact_num * 0.2 #緊急事態宣言時は、平時の2割程度の接触回数
 infetion_rate = 0.01 #1接触あたりの感染確率
-healing_rate = 0.03
+healing_rate = 0.02
 loop_num = 500
 emergency_loop_num = 30
 emergency_start = 80
@@ -215,7 +215,7 @@ axes[2, 0].plot(t_list_with, R_list_with, label='R', linewidth=2, color='blue')
 axes[2, 0].plot(t_list_with, D_list_with, label='D', linewidth=2, color='red')
 axes[2, 0].axvline(x=emergency_start, color='gray', linestyle='--', alpha=0.7, label='emergency_start')
 axes[2, 0].axvline(x=emergency_stop, color='gray', linestyle='--', alpha=0.7, label='emergency_end')
-axes[2, 0].set_title('S,I,R,D')
+axes[2, 0].set_title('S,I,R,D (with emergency)')
 axes[2, 0].set_xlabel('time (day)')
 axes[2, 0].set_ylabel('population')
 axes[2, 0].legend()
